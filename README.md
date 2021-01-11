@@ -1,7 +1,7 @@
 # NoQRCodeLogin
 A Browser's UserScript to set account password login as default instand of QRCode Login
 
-**Supoort List**
+**Support List**
 - [12306](https://kyfw.12306.cn/)
 - [Taobao.com](https://login.taobao.com/)
 - [JD.com](https://www.jd.com/)
@@ -14,7 +14,6 @@ A Browser's UserScript to set account password login as default instand of QRCod
 - [QQ](https://www.qq.com/)
 - [163 Mail](https://mail.163.com/)
 - [Weiyun](https://www.weiyun.com/)
-- [Tencent Cloud](https://cloud.tencent.com/)
 - [Tencent Exmail](https://exmail.qq.com/login)
 - [WeChat Pay](https://pay.weixin.qq.com/)
 - [IQIYI](https://www.iqiyi.com/)
