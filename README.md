@@ -20,6 +20,7 @@ A Browser's UserScript to set account password login as default instand of QRCod
 - [AcFun](https://www.acfun.cn/)
 - [Netease Cloud Music](https://music.163.com/)
 - [Xiami Music](https://www.xiami.com/)
+- [Douyu](https://www.douyu.com/)
 - [Huya](https://www.huya.com/)
 - [SMZDM](https://www.smzdm.com/)
 - [58.com](https://passport.58.com/)
@@ -28,6 +29,7 @@ A Browser's UserScript to set account password login as default instand of QRCod
 - [115.com](https://115.com/)（请配合 **[fake115脚本](https://github.com/kkHAIKE/fake115/raw/master/fake115.user.js)** 食用）
 - [TianYa](http://www.tianya.cn/)
 - [DNSPod](https://www.dnspod.cn/)
+- [企查查](https://www.qcc.com/)
 - [pinduoduo.com](https://mms.pinduoduo.com/)
 - [广东省统一身份认证平台](http://tyrz.gd.gov.cn/)
 - [Baixinglcom](https://www.baixing.com/)
