@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         拒绝二维码登录
 // @namespace    NoQRCodeLogin
-// @version      2.2.4
+// @version      2.2.5
 // @description  新版12306、QQ、支付宝、淘宝、京东、百度云盘等网站默认使用账号密码登录，不出现二维码登录界面,可自定义设置在指定网站开启和关闭，有需求或问题请反馈。
 // @author       Eva
 // @match        *://kyfw.12306.cn/*
@@ -25,6 +25,7 @@
 // @match        *://www.acfun.cn/*
 // @match        *://music.163.com/*
 // @match        *://*.xiami.com/*
+// @match        *://*.douyu.com/*
 // @match        *://*.huya.com/*
 // @match        *://*.smzdm.com/*
 // @match        *://passport.58.com/*
@@ -33,6 +34,7 @@
 // @match        *://*.115.com/*
 // @match        *://*.tianya.cn/*
 // @match        *://*.dnspod.cn/*
+// @match        *://www.qcc.com/*
 // @match        *://mms.pinduoduo.com/*
 // @match        *://*.tyrz.gd.gov.cn/*
 // @match        *://*.baixing.com/*
@@ -82,6 +84,7 @@
         { 'name': 'AcFun', 'url': 'www.acfun.cn', 'enabled': true },
         { 'name': '网易云音乐', 'url': 'music.163.com', 'enabled': true },
         { 'name': '虾米音乐', 'url': 'xiami.com', 'enabled': true },
+        { 'name': '斗鱼', 'url': 'douyu.com', 'enabled': true },
         { 'name': '虎牙直播', 'url': 'huya.com', 'enabled': true },
         { 'name': '什么值得买', 'url': 'smzdm.com', 'enabled': true },
         { 'name': '58同城', 'url': 'passport.58.com', 'enabled': true },
@@ -90,6 +93,7 @@
         { 'name': '115云', 'url': '115.com', 'enabled': true },
         { 'name': '天涯社区', 'url': 'tianya.cn', 'enabled': true },
         { 'name': 'DNSPod', 'url': 'dnspod.cn', 'enabled': true },
+        { 'name': '企查查', 'url': 'www.qcc.com', 'enabled': true },
         { 'name': '拼多多商家', 'url': 'mms.pinduoduo.com', 'enabled': true },
         { 'name': '广东省统一身份认证平台', 'url': 'tyrz.gd.gov.cn', 'enabled': true },
         { 'name': '百姓网', 'url': 'baixing.com', 'enabled': true },
@@ -749,6 +753,24 @@
                     }, 50);
                 });
                 break;
+            // 斗鱼
+            case 'douyu.com':
+                if ($('.scancode-login').length > 0 && $('.scancode-login').hasClass('status-scan')) {
+                    setTimeout(function () {
+                        console.log('switch qrcode click');
+                        $(".scanicon-toLogin")[0].click();
+                    }, 100);
+                    $(".inputLoginBtn").on('click', function () {
+                        var nickname = $('.loginbox-login-subtype').find('[data-subtype="login-by-nickname"]');
+                        if (nickname && !nickname.hasClass('active')) {
+                            setTimeout(function () {
+                                console.log('switch nickname click');
+                                nickname[0].click();
+                            }, 100);
+                        }
+                    })
+                }
+                break;
             // 虎牙直播
             case 'huya.com':
                 var auto = setInterval(function () {
@@ -832,6 +854,16 @@
                 var auto = setInterval(function () {
                     if ($('a[href^="/login/email"]').length > 0 && !$('a[href^="/login/email"]').parent('.dp-login__tabitem').hasClass('is-active')) {
                         $('a[href^="/login/email"]')[0].click();
+                        clearInterval(auto);
+                    }
+                }, 50);
+                break;
+                break;
+            // 企查查
+            case 'www.qcc.com':
+                var auto = setInterval(function () {
+                    if ($('#normalLogin').length > 0 && !$('#normalLogin').hasClass('active')) {
+                        $('#normalLogin')[0].click();
                         clearInterval(auto);
                     }
                 }, 50);
