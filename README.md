@@ -1,6 +1,8 @@
 # NoQRCodeLogin
 A Browser's UserScript to set account password login as default instand of QRCode Login
 
+[Greasy Fork](https://greasyfork.org/zh-CN/scripts/37988)
+
 **Support List**
 - [12306](https://kyfw.12306.cn/)
 - [Taobao.com](https://login.taobao.com/)
@@ -23,10 +25,16 @@ A Browser's UserScript to set account password login as default instand of QRCod
 - [Douyu](https://www.douyu.com/)
 - [Huya](https://www.huya.com/)
 - [SMZDM](https://www.smzdm.com/)
+- [KaoLa](https://account.kaola.com/login.html)
+- [China Mobile - JiangSu](http://service.js.10086.cn/login.html)
+- [Cloud 189](https://cloud.189.cn/)
+- [China Telecom](https://login.189.cn/)
+- [China Telecom - JiangSu](https://js.189.cn/nservice/login/toLogin)
 - [58.com](https://passport.58.com/)
 - [CSDN](https://passport.csdn.net/)
 - [Dianping](https://account.dianping.com/)
-- [115.com](https://115.com/)（请配合 **[fake115脚本](https://github.com/kkHAIKE/fake115/raw/master/fake115.user.js)** 食用）
+- [ChinaTax](etax.chinatax.gov.cn)
+- [115.com](https://115.com/)（install **[fake115](https://github.com/kkHAIKE/fake115/raw/master/fake115.user.js)** first）
 - [TianYa](http://www.tianya.cn/)
 - [DNSPod](https://www.dnspod.cn/)
 - [企查查](https://www.qcc.com/)
@@ -36,3 +44,4 @@ A Browser's UserScript to set account password login as default instand of QRCod
 - [SL56](https://sl56.com/)
 - [Sangon Biotech](https://passport.sangon.com/)
 - [21世纪教育](https://passport.21cnjy.com/)
+- [学校安全教育平台](https://www.xueanquan.com/)
